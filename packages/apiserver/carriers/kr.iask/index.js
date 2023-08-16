@@ -56,7 +56,7 @@ function getTrack(trackId) {
       const progresses = [];
 
       $progressTable.find('tr').each((trIndex, tr) => {
-        if (trIndex % 2 === 1) {
+        if (trIndex >= 1) {
           const form = {time: '', location: {name: ''}, status: {id: '', text: ''}, description: ''};
 
           $(tr).find('td').each((tdIndex, td) => {
