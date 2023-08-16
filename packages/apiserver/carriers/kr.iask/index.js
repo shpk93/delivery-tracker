@@ -8,9 +8,9 @@ function parseStatus(s) {
   //! 현재까지 확인된 스테이터스 => 상품준비중, 배송이관, 본사입고
 
   if (s.includes('상품준비중')) return {id: 'processing', text: '상품준비중'}
-  if (s.includes('배송이관')) return {id: 'at_pickup', text: '배송이관'};
-  if (s.includes('배달준비')) return {id: 'out_for_delivery', text: '배송출발'};
-  if (s.includes('배달완료')) return {id: 'delivered', text: '배송완료'};
+  if (s.includes('본사입고')) return {id: 'at_pickup', text: '배송이관'};
+  if (s.includes('배송기사출고')) return {id: 'out_for_delivery', text: '배송출발'};
+  if (s.includes('배송완료')) return {id: 'delivered', text: '배송완료'};
   return {id: 'in_transit', text: '이동중'};
 }
 
